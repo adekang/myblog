@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>./</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="./index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo基础指南</title>
+      <link>./about/</link>
+      <pubDate>Tue, 02 Nov 2021 10:00:02 +0800</pubDate>
+      
+      <guid>./about/</guid>
+      <description>1. 安装 Hugo 🔗从 Hugo 项目主页下载 Releases 文件，解压 hugo.exe 文件到 C:\Windows\System32 目录下。
+2. 创建站点 🔗hugo new site mysite 新的站点文件夹 mysite 就自动生成到了当前目录下：
+在执行完 hugo new site 命令后你会得到一个包含以下文件的目录。
+. ├── archetypes/ ├── config.toml ├── content/ # 储存网站的所有文章内容 ├── data/ ├── layouts/ # 全局样式，优先级高于主题下的 layouts 文件夹 ├── static/ # 静态文件，优先级高于主题下的 static 文件夹 └── themes/ # 主题目录 3. 新建页面和文章 🔗新建一个 about 页面：
+hugo new about.md about.md 自动生成到了 content/about.md，内容如下：
+--- title: &amp;quot;About&amp;quot; date: 2020-04-07T22:05:28+08:00 draft: true --- 创建第一篇文章，放到 post 目录：</description>
+    </item>
+    
+  </channel>
+</rss>
