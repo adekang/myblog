@@ -1,1 +1,6 @@
 @import "assets/varible.css";
+
+
+body {
+    background-color: var(--bg-color);
+}

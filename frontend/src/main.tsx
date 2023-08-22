@@ -4,6 +4,7 @@ import App from './App.tsx'
 import 'virtual:uno.css'
 import './index.css'
 import '@unocss/reset/normalize.css'
+import 'antd/dist/reset.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
