@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+
+    .logo {
+        border: 1px solid black;
+        width: 48px;
+        height: 48px;
+
+    }
+
+    .main-nav {
+        flex: 1;
+        display: flex;
+
+        .nav-list {
+            display: flex;
+            width: 100%;
+
+            .left-side-nav {
+                display: flex;
+                padding-left: 16px;
+            }
+
+            .right-side-nav {
+                display: flex;
+                flex: 1;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+}
+
