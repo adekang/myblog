@@ -6,7 +6,6 @@ function App() {
         <div className="blog-app">
             <RouterProvider router={router}/>
         </div>
-
   )
 }
 
