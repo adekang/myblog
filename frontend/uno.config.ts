@@ -20,7 +20,11 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      primary: '#1e80ff',
+      'primary': '#1e80ff',
+      'font-1': '#252933',
+      'font-2': '#515767',
+      'font-3': '#8a919f',
+      'font-4': '#c2c8d1',
     },
     fontFamily: {
       sans: 'DM Sans',

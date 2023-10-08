@@ -18,11 +18,11 @@ const MyLayout: React.FC<Props> = () => {
   }
   return (
         <>
-            <Layout>
+            <Layout className="gap-4">
                 <Header style={headerStyle}>
                     <MyHeader/>
                 </Header>
-                <Content className="container mx-auto">
+                <Content className="container mx-auto h-full">
                     <Outlet/>
                 </Content>
             </Layout>

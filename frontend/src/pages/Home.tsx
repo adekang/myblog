@@ -1,12 +1,26 @@
+import { Card } from 'antd'
+import { AEntryItem } from '@/components/AEntryItem'
+
 interface Props {
 }
 
 export const Home: React.FC<Props> = () => {
   return (
-        <>
-            <div className="flex flex-col items-center justify-center">
-                <span className="text-4xl">Home</span>
-            </div>
-        </>
+        <div className="w-full flex flex-row gap-4">
+            <Card className="basis-1/12 h-fit">
+                tags
+            </Card>
+            <Card className='basis-9/12 truncate min-h-80vh divide-y divide-solid'>
+                <AEntryItem/>
+                <AEntryItem/>
+                <AEntryItem/>
+                <AEntryItem/>
+                <AEntryItem/>
+                <AEntryItem/>
+            </Card>
+            <Card className='basis-2/12 h-fit '>
+                adekang
+            </Card>
+        </div>
   )
 }
