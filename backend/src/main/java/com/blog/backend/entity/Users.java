@@ -6,15 +6,12 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
- * <p>
- * 用户
- * </p>
- *
  * @author adekang
  * @since 2023-08-10
  */
@@ -22,6 +19,7 @@ import java.time.LocalDateTime;
 @ApiModel(value = "Users对象", description = "用户 ")
 public class Users implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("用户ID")
