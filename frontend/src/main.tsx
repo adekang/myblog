@@ -5,6 +5,7 @@ import 'virtual:uno.css'
 import './index.css'
 import '@unocss/reset/normalize.css'
 import 'antd/dist/reset.css'
+import 'bytemd/dist/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>

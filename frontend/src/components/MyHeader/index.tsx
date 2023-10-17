@@ -1,8 +1,13 @@
-import { Space } from 'antd'
-import { Link } from 'react-router-dom'
+import { Button, Space } from 'antd'
+import { Link, useNavigate } from 'react-router-dom'
 import './index.css'
 
 const MyHeader = () => {
+  const navigate = useNavigate()
+  const handleGo = () => {
+    navigate('/editor')
+  }
+
   return (
         <div className="container">
             <div className="logo">logo</div>
@@ -18,7 +23,7 @@ const MyHeader = () => {
                     <div className="right-side-nav">
                         <Space>
                             <div>搜索框</div>
-                            <div>写文章</div>
+                            <Button onClick={handleGo}>写文章</Button>
                             <div>登录</div>
                         </Space>
                     </div>
