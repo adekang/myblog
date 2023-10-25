@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface ArticleMapper extends BaseMapper<Article> {
     List<ArticlePost> findAllPost();
+
+    int insert(Article article);
 }

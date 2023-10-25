@@ -1,5 +1,6 @@
 package com.blog.backend.entity.VO;
 
+import com.blog.backend.entity.Tag;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
@@ -13,8 +14,8 @@ public class ArticlePost implements Serializable {
     private Integer readCount;
     private Integer likeCount;
     private String articleSummary;
-    private List<String> tags;
+    private List<Tag> tags;
 
     @JsonIgnore
-    private String tagString;
+    private String tagIds;
 }

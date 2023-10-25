@@ -5,7 +5,7 @@
     <select id="findAllPost" resultType="com.blog.backend.entity.VO.ArticlePost">
         SELECT
             a.article_id, a.title,a.read_count,a.like_count,a.article_summary,
-            GROUP_CONCAT(t.tag_name) AS tagString
+            GROUP_CONCAT(t.tag_id) AS tagIds
         FROM
             article a
                 LEFT JOIN article_tag_referenced atr ON a.article_id = atr.article_id
@@ -13,4 +13,8 @@
         GROUP BY
             a.article_id
     </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="articleId">
+        insert into article (title, article_summary) values (#{title}, #{articleSummary})
+    </insert>
 </mapper>

@@ -1,13 +1,11 @@
 package com.blog.backend.controller;
 
 import com.blog.backend.common.Result;
+import com.blog.backend.entity.DO.ArticleDO;
 import com.blog.backend.entity.VO.ArticlePost;
 import com.blog.backend.service.IArticleService;
-import com.blog.backend.service.IUsersService;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -24,5 +22,11 @@ public class ArticleController {
     public Result findAll() {
         List<ArticlePost> allPost = articleService.findAllPost();
         return Result.success(allPost);
+    }
+
+    @PostMapping("/addPost")
+    public Result addPost(@RequestBody ArticleDO articleDO) {
+        articleService.insert(articleDO);
+        return Result.success();
     }
 }
