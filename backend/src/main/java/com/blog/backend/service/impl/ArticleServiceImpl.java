@@ -3,6 +3,7 @@ package com.blog.backend.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.blog.backend.entity.Article;
 import com.blog.backend.entity.ArticleDetail;
+import com.blog.backend.entity.ArticleTagReferenced;
 import com.blog.backend.entity.DO.ArticleDO;
 import com.blog.backend.entity.Tag;
 import com.blog.backend.entity.VO.ArticlePost;
@@ -10,6 +11,7 @@ import com.blog.backend.mapper.ArticleDetailMapper;
 import com.blog.backend.mapper.ArticleMapper;
 import com.blog.backend.mapper.TagMapper;
 import com.blog.backend.service.IArticleService;
+import com.blog.backend.service.IArticleTagReferencedService;
 import com.blog.backend.service.ITagService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -30,6 +32,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     private ArticleDetailMapper articleDetailMapper;
     @Resource
     private ITagService tagService;
+    @Resource
+    private IArticleTagReferencedService articleTagReferencedService;
 
     @Transactional // 事务 保证数据一致性
     @Override
@@ -66,8 +70,15 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
                 .build();
         articleDetailMapper.insertDetail(articleDetail);
 
+        if (articleDO.getTags() == null || articleDO.getTags().isEmpty()) {
+            return;
+        }
         // 文章标签新增
-
-
+        for (Tag tag : articleDO.getTags()) {
+            ArticleTagReferenced articleTagReferenced = new ArticleTagReferenced();
+            articleTagReferenced.setArticleId(articleId);
+            articleTagReferenced.setTagId(tag.getTagId());
+            articleTagReferencedService.save(articleTagReferenced);
+        }
     }
 }
