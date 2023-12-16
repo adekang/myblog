@@ -20,12 +20,15 @@
     ]
   },
   "dependencies": {
+    "@bytemd/plugin-frontmatter": "^1.21.0",
     "@bytemd/plugin-gfm": "^1.21.0",
+    "@bytemd/plugin-highlight": "^1.21.0",
     "@bytemd/react": "^1.21.0",
     "@unocss/reset": "^0.55.7",
     "antd": "^5.9.4",
     "axios": "^1.5.1",
     "bytemd": "^1.21.0",
+    "highlight.js": "^11.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",

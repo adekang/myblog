@@ -3,5 +3,5 @@ export interface ArticlePost {
   readCount: number
   likeCount: number
   articleSummary: string
-  tags: string[]
+  tags: Record<string, any>[]
 }

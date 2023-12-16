@@ -21,9 +21,9 @@ export const AEntryItem: React.FC<Props> = (props) => {
                     </ul>
                 </div>
                 <div className="entry-footer-tags">
-                    {post.tags.map((item, index) => {
+                    {post.tags && post.tags.map((item, index) => {
                       return (
-                            <Tag color="blue" key={index}>{item}</Tag>
+                            <Tag color="blue" key={index}>{item.tagName}</Tag>
                       )
                     })}
                 </div>
